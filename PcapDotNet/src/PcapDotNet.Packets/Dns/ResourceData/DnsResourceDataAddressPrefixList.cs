@@ -30,7 +30,7 @@ namespace PcapDotNet.Packets.Dns
         /// </summary>
         public DnsResourceDataAddressPrefixList(IList<DnsAddressPrefix> items)
         {
-            Items = items.AsReadOnly();
+            Items = items.AsReadOnlyCollection();
         }
 
         /// <summary>

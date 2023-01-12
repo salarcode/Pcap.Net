@@ -29,7 +29,7 @@ namespace PcapDotNet.Packets.IpV6
         /// One or more BID fields can be included in this sub-option.
         /// </param>
         public IpV6FlowIdentificationSubOptionBindingReference(IList<ushort> bindingIds)
-            : this((ReadOnlyCollection<ushort>)bindingIds.AsReadOnly())
+            : this((ReadOnlyCollection<ushort>)bindingIds.AsReadOnlyCollection())
         {
         }
 
@@ -41,7 +41,7 @@ namespace PcapDotNet.Packets.IpV6
         /// One or more BID fields can be included in this sub-option.
         /// </param>
         public IpV6FlowIdentificationSubOptionBindingReference(params ushort[] bindingIds)
-            : this(bindingIds.AsReadOnly())
+            : this(bindingIds.AsReadOnlyCollection())
         {
         }
 

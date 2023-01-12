@@ -145,10 +145,10 @@ namespace PcapDotNet.Packets.Test
                                                 {
                                                     ProtocolType = EthernetType.IpV4,
                                                     Operation = ArpOperation.DynamicReverseError,
-                                                    SenderHardwareAddress = new byte[12].AsReadOnly(),
-                                                    SenderProtocolAddress = new byte[22].AsReadOnly(),
-                                                    TargetHardwareAddress = new byte[12].AsReadOnly(),
-                                                    TargetProtocolAddress = new byte[22].AsReadOnly(),
+                                                    SenderHardwareAddress = new byte[12].AsReadOnlyCollection(),
+                                                    SenderProtocolAddress = new byte[22].AsReadOnlyCollection(),
+                                                    TargetHardwareAddress = new byte[12].AsReadOnlyCollection(),
+                                                    TargetProtocolAddress = new byte[22].AsReadOnlyCollection(),
                                                 });
             Assert.IsTrue(packet.IsValid);
             Assert.AreEqual(DataSegment.Empty, packet.Ethernet.Padding);

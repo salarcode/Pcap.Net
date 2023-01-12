@@ -27,7 +27,7 @@ namespace PcapDotNet.Packets.IpV4
                 throw new ArgumentException("Illegal timestamp type " + timestampType, "timestampType");
             }
 
-            _addressesAndTimestamps = timedRoute.AsReadOnly();
+            _addressesAndTimestamps = timedRoute.AsReadOnlyCollection();
         }
 
         /// <summary>

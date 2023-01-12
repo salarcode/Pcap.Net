@@ -51,7 +51,7 @@ namespace PcapDotNet.Packets.Dns
         /// Identifies the RRset types that exist at the NSEC RR's owner name.
         /// Ordered by the DnsType value.
         /// </summary>
-        public ReadOnlyCollection<DnsType> TypesExist { get { return _typeBitmaps.TypesExist.AsReadOnly(); } }
+        public ReadOnlyCollection<DnsType> TypesExist { get { return _typeBitmaps.TypesExist.AsReadOnlyCollection(); } }
 
         /// <summary>
         /// True iff the given dns type exists.

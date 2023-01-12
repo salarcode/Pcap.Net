@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.CSharp;
 using PcapDotNet.Base;
+using EncodingExtensions = PcapDotNet.Base.EncodingExtensions;
 
 namespace PcapDotNet.Packets.Http
 {
@@ -147,7 +148,7 @@ namespace PcapDotNet.Packets.Http
         }
 
         internal HttpField(string name, IList<byte> value)
-            : this(name, value.AsReadOnly())
+            : this(name, value.AsReadOnlyCollection())
         {
         }
 

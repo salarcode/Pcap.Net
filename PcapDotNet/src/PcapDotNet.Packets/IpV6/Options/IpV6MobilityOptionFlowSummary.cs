@@ -35,7 +35,7 @@ namespace PcapDotNet.Packets.IpV6
         /// One or more FID fields can be included in this option.
         /// </param>
         public IpV6MobilityOptionFlowSummary(params ushort[] flowIdentifiers)
-            : this(flowIdentifiers.AsReadOnly())
+            : this(flowIdentifiers.AsReadOnlyCollection())
         {
         }
 
@@ -59,7 +59,7 @@ namespace PcapDotNet.Packets.IpV6
         /// One or more FID fields can be included in this option.
         /// </param>
         public IpV6MobilityOptionFlowSummary(IList<ushort> flowIdentifiers)
-            : this(flowIdentifiers.AsReadOnly())
+            : this(flowIdentifiers.AsReadOnlyCollection())
         {
         }
 

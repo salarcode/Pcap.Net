@@ -16,10 +16,10 @@ namespace PcapDotNet.Packets.TestUtils
             byte protocolAddressLength = random.NextByte();
             return new ArpLayer
                    {
-                       SenderHardwareAddress = random.NextBytes(hardwareAddressLength).AsReadOnly(),
-                       SenderProtocolAddress = random.NextBytes(protocolAddressLength).AsReadOnly(),
-                       TargetHardwareAddress = random.NextBytes(hardwareAddressLength).AsReadOnly(),
-                       TargetProtocolAddress = random.NextBytes(protocolAddressLength).AsReadOnly(),
+                       SenderHardwareAddress = random.NextBytes(hardwareAddressLength).AsReadOnlyCollection(),
+                       SenderProtocolAddress = random.NextBytes(protocolAddressLength).AsReadOnlyCollection(),
+                       TargetHardwareAddress = random.NextBytes(hardwareAddressLength).AsReadOnlyCollection(),
+                       TargetProtocolAddress = random.NextBytes(protocolAddressLength).AsReadOnlyCollection(),
                        ProtocolType = random.NextEnum<EthernetType>(),
                        Operation = random.NextEnum<ArpOperation>(),
                    };

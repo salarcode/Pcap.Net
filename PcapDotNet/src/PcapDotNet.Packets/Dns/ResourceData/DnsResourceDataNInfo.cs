@@ -37,7 +37,7 @@ namespace PcapDotNet.Packets.Dns
         /// </summary>
         /// <param name="strings">A descriptive text in one or more strings.</param>
         public DnsResourceDataNInfo(params DataSegment[] strings)
-            : this(strings.AsReadOnly())
+            : this(strings.AsReadOnlyCollection())
         {
         }
 
@@ -52,7 +52,7 @@ namespace PcapDotNet.Packets.Dns
             if (strings == null || strings.Count < MinNumStrings)
                 return null;
 
-            return new DnsResourceDataNInfo(strings.AsReadOnly());
+            return new DnsResourceDataNInfo(strings.AsReadOnlyCollection());
         }
     }
 }

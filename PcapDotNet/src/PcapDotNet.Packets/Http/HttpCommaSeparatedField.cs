@@ -58,7 +58,7 @@
 //                    innerFieldValues = new List<ReadOnlyCollection<byte>>();
 //                    innerFields.Add(innerFieldName, innerFieldValues);
 //                }
-//                innerFieldValues.Add(commaValue.Value == null ? null : commaValue.Value.ToArray().AsReadOnly());
+//                innerFieldValues.Add(commaValue.Value == null ? null : commaValue.Value.ToArray().AsReadOnlyCollection());
 //            }
 //
 //            _innerFields = innerFields.ToDictionary(field => field.Key, field => new HttpCommaSeparatedInnerField(field.Key, field.Value));

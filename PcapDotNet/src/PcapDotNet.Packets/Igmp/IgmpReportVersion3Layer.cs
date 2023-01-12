@@ -17,7 +17,7 @@ namespace PcapDotNet.Packets.Igmp
         /// </summary>
         public IgmpReportVersion3Layer()
         {
-            GroupRecords = new IgmpGroupRecord[0].AsReadOnly();
+            GroupRecords = new IgmpGroupRecord[0].AsReadOnlyCollection();
         }
         /// <summary>
         /// Each Group Record is a block of fields containing information pertaining to the sender's membership in a single multicast group on the interface from which the Report is sent.

@@ -60,7 +60,7 @@ namespace PcapDotNet.Packets.IpV6
         public IpV6ExtensionHeaderRoutingSourceRoute(IpV4Protocol? nextHeader, byte segmentsLeft, params IpV6Address[] addresses)
             : base(nextHeader, segmentsLeft)
         {
-            Addresses = addresses.AsReadOnly();
+            Addresses = addresses.AsReadOnlyCollection();
         }
 
         /// <summary>

@@ -98,7 +98,7 @@ namespace PcapDotNet.Packets.TestUtils
                             IpV4Address[] igmpSourceAddresses = random.NextIpV4Addresses(random.Next(1000));
                             return new IgmpQueryVersion3Layer
                                    {
-                                       SourceAddresses = igmpSourceAddresses.AsReadOnly(),
+                                       SourceAddresses = igmpSourceAddresses.AsReadOnlyCollection(),
                                        MaxResponseTime = igmpMaxResponseTime,
                                        GroupAddress = igmpGroupAddress,
                                        IsSuppressRouterSideProcessing = igmpIsSuppressRouterSideProcessing,
@@ -136,7 +136,7 @@ namespace PcapDotNet.Packets.TestUtils
                         return new IgmpReportVersion3Layer();
                     return new IgmpReportVersion3Layer
                            {
-                               GroupRecords = igmpGroupRecords.AsReadOnly()
+                               GroupRecords = igmpGroupRecords.AsReadOnlyCollection()
                            };
 
                 default:

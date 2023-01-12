@@ -98,7 +98,7 @@ namespace PcapDotNet.Packets.Gre
         }
 
         internal GreSourceRouteEntryIp(IpV4Address[] addresses, int nextAddressIndex)
-            :this(addresses.AsReadOnly(), nextAddressIndex)
+            :this(addresses.AsReadOnlyCollection(), nextAddressIndex)
         {
         }
 

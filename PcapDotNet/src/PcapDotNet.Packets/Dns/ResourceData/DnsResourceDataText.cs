@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using PcapDotNet.Base;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace PcapDotNet.Packets.Dns
@@ -32,7 +33,7 @@ namespace PcapDotNet.Packets.Dns
         internal override DnsResourceData CreateInstance(DataSegment data)
         {
             List<DataSegment> strings = ReadStrings(data);
-            return new DnsResourceDataText(strings.AsReadOnly());
+            return new DnsResourceDataText(strings.AsReadOnlyCollection());
         }
     }
 }

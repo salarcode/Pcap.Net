@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using PcapDotNet.Base;
 using PcapDotNet.Packets.Http;
 
 namespace PcapDotNet.Packets.Transport
@@ -321,7 +322,7 @@ namespace PcapDotNet.Packets.Transport
                         httpList.Add(httpDatagram);
                     } while (Length > HeaderLength + httpParsed);
 
-                    _httpCollection = httpList.AsReadOnly();
+                    _httpCollection = httpList.AsReadOnlyCollection();
                 }
                 return _httpCollection;
             }

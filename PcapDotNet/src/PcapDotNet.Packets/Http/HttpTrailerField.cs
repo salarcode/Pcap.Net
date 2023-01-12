@@ -84,7 +84,7 @@ namespace PcapDotNet.Packets.Http
 
         private void SetFieldNames(IEnumerable<string> fieldNames)
         {
-            _fieldNames = fieldNames.Select(name => name.ToUpperInvariant()).ToArray().AsReadOnly();
+            _fieldNames = fieldNames.Select(name => name.ToUpperInvariant()).ToArray().AsReadOnlyCollection();
         }
 
         private const string FieldNameGroupName = "FieldName";

@@ -92,10 +92,10 @@ namespace PcapDotNet.Packets.Test
                                                 },
                                                 new ArpLayer
                                                 {
-                                                    SenderHardwareAddress = new byte[8].AsReadOnly(),
-                                                    SenderProtocolAddress = new byte[] { 1, 2, 3, 4 }.AsReadOnly(),
-                                                    TargetHardwareAddress = new byte[8].AsReadOnly(),
-                                                    TargetProtocolAddress = new byte[] { 11, 22, 33, 44 }.AsReadOnly(),
+                                                    SenderHardwareAddress = new byte[8].AsReadOnlyCollection(),
+                                                    SenderProtocolAddress = new byte[] { 1, 2, 3, 4 }.AsReadOnlyCollection(),
+                                                    TargetHardwareAddress = new byte[8].AsReadOnlyCollection(),
+                                                    TargetProtocolAddress = new byte[] { 11, 22, 33, 44 }.AsReadOnlyCollection(),
                                                     Operation = ArpOperation.Request,
                                                 });
 
@@ -115,10 +115,10 @@ namespace PcapDotNet.Packets.Test
                                                 },
                                                 new ArpLayer
                                                 {
-                                                    SenderHardwareAddress = new byte[4].AsReadOnly(),
-                                                    SenderProtocolAddress = new byte[6].AsReadOnly(),
-                                                    TargetHardwareAddress = new byte[5].AsReadOnly(),
-                                                    TargetProtocolAddress = new byte[6].AsReadOnly(),
+                                                    SenderHardwareAddress = new byte[4].AsReadOnlyCollection(),
+                                                    SenderProtocolAddress = new byte[6].AsReadOnlyCollection(),
+                                                    TargetHardwareAddress = new byte[5].AsReadOnlyCollection(),
+                                                    TargetProtocolAddress = new byte[6].AsReadOnlyCollection(),
                                                     Operation = ArpOperation.Request,
                                                 });
             Assert.IsNull(packet);
@@ -137,10 +137,10 @@ namespace PcapDotNet.Packets.Test
                                                  },
                                                  new ArpLayer
                                                  {
-                                                     SenderHardwareAddress = new byte[4].AsReadOnly(),
-                                                     SenderProtocolAddress = new byte[6].AsReadOnly(),
-                                                     TargetHardwareAddress = new byte[4].AsReadOnly(),
-                                                     TargetProtocolAddress = new byte[7].AsReadOnly(),
+                                                     SenderHardwareAddress = new byte[4].AsReadOnlyCollection(),
+                                                     SenderProtocolAddress = new byte[6].AsReadOnlyCollection(),
+                                                     TargetHardwareAddress = new byte[4].AsReadOnlyCollection(),
+                                                     TargetProtocolAddress = new byte[7].AsReadOnlyCollection(),
                                                      Operation = ArpOperation.Request,
                                                  });
             Assert.IsNull(packet);

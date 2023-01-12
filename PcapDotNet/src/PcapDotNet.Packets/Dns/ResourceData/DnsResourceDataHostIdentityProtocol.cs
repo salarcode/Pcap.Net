@@ -71,7 +71,7 @@ namespace PcapDotNet.Packets.Dns
             HostIdentityTag = hostIdentityTag;
             PublicKeyAlgorithm = publicKeyAlgorithm;
             PublicKey = publicKey;
-            RendezvousServers = IListExtensions.AsReadOnly<DnsDomainName>(rendezvousServers.ToArray());
+            RendezvousServers = IListExtensions.AsReadOnlyCollection<DnsDomainName>(rendezvousServers.ToArray());
         }
 
         /// <summary>

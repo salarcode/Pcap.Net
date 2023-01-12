@@ -109,6 +109,6 @@ namespace PcapDotNet.Packets.IpV6
                         IpV4Protocol.EncapsulatingSecurityPayload,
                         IpV4Protocol.AuthenticationHeader
                     }).
-                ToArray().AsReadOnly();
+                ToArray().AsReadOnlyCollection();
     }
 }

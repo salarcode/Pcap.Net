@@ -160,7 +160,7 @@ namespace PcapDotNet.Packets.TestUtils
 
                 case DnsType.Txt:
                 case DnsType.SenderPolicyFramework:
-                    return new DnsResourceDataText(((Func<DataSegment>)(() => random.NextDataSegment(random.Next(10)))).GenerateArray(10).AsReadOnly());
+                    return new DnsResourceDataText(((Func<DataSegment>)(() => random.NextDataSegment(random.Next(10)))).GenerateArray(10).AsReadOnlyCollection());
 
                 case DnsType.ResponsiblePerson:
                     return new DnsResourceDataResponsiblePerson(random.NextDnsDomainName(), random.NextDnsDomainName());
@@ -305,7 +305,7 @@ namespace PcapDotNet.Packets.TestUtils
                                                                    ((Func<DnsDomainName>)(() => random.NextDnsDomainName())).GenerateArray(random.NextInt(0, 10)));
 
                 case DnsType.NInfo:
-                    return new DnsResourceDataNInfo(((Func<DataSegment>)(() => random.NextDataSegment(random.NextInt(1, 10)))).GenerateArray(10).AsReadOnly());
+                    return new DnsResourceDataNInfo(((Func<DataSegment>)(() => random.NextDataSegment(random.NextInt(1, 10)))).GenerateArray(10).AsReadOnlyCollection());
 
                 case DnsType.RKey:
                     return new DnsResourceDataRKey(random.NextUShort(), random.NextByte(), random.NextEnum<DnsAlgorithm>(), random.NextDataSegment(random.NextInt(0, 100)));

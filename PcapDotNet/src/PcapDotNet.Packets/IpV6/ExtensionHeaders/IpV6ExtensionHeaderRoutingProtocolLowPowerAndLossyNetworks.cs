@@ -122,7 +122,7 @@ namespace PcapDotNet.Packets.IpV6
                     ValidateCommonPrefixForAddress(addresses, addresses.Length - 1, commonPrefixLengthForLastAddress);
             }
 
-            Addresses = addresses.AsReadOnly();
+            Addresses = addresses.AsReadOnlyCollection();
 
             PadSize = (byte)((8 - Length % 8) % 8);
         }

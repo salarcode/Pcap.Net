@@ -68,7 +68,7 @@ namespace PcapDotNet.Packets.Dns
         /// <summary>
         /// Identifies the RRSet types that exist at the original owner name of the NSEC3 RR.
         /// </summary>
-        public ReadOnlyCollection<DnsType> TypesExist { get { return _typeBitmaps.TypesExist.AsReadOnly(); } }
+        public ReadOnlyCollection<DnsType> TypesExist { get { return _typeBitmaps.TypesExist.AsReadOnlyCollection(); } }
 
         /// <summary>
         /// Two DnsResourceDataNextDomainSecure3 are equal iff their hash algorithm, flags, iterations, salt, next hashed owner name and types exist fields

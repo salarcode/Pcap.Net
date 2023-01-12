@@ -77,7 +77,7 @@ namespace PcapDotNet.Packets.IpV6
         /// <param name="homeAgentAddresses">A list of alternate home agent addresses for the mobile node.</param>
         /// <param name="options">Zero or more TLV-encoded mobility options.</param>
         public IpV6ExtensionHeaderMobilityHomeAgentSwitchMessage(IpV4Protocol? nextHeader, ushort checksum, IList<IpV6Address> homeAgentAddresses, IpV6MobilityOptions options)
-            : this(nextHeader, checksum, (ReadOnlyCollection<IpV6Address>)homeAgentAddresses.AsReadOnly(), options)
+            : this(nextHeader, checksum, (ReadOnlyCollection<IpV6Address>)homeAgentAddresses.AsReadOnlyCollection(), options)
         {
         }
 

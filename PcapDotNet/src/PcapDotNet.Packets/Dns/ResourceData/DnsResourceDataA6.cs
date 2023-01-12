@@ -2,6 +2,7 @@
 using System.Globalization;
 using PcapDotNet.Base;
 using PcapDotNet.Packets.IpV6;
+using UInt128 = PcapDotNet.Base.UInt128;
 
 namespace PcapDotNet.Packets.Dns
 {

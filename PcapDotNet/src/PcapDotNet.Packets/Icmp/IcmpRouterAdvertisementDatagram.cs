@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using PcapDotNet.Base;
 using PcapDotNet.Packets.IpV4;
 
 namespace PcapDotNet.Packets.Icmp
@@ -110,7 +111,7 @@ namespace PcapDotNet.Packets.Icmp
         {
             return new IcmpRouterAdvertisementLayer
                    {
-                       Entries = Entries.ToList().AsReadOnly(),
+                       Entries = Entries.ToList().AsReadOnlyCollection(),
                        Checksum = Checksum,
                        Lifetime = Lifetime,
                    };

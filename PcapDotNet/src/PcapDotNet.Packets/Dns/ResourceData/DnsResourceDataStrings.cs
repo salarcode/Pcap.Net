@@ -45,7 +45,7 @@ namespace PcapDotNet.Packets.Dns
         }
 
         internal DnsResourceDataStrings(params DataSegment[] strings)
-            : this(strings.AsReadOnly())
+            : this(strings.AsReadOnlyCollection())
         {
         }
 

@@ -97,7 +97,7 @@ namespace PcapDotNet.Packets.Gre
         }
 
         internal GreSourceRouteEntryAs(ushort[] asNumbers, int nextAsNumberIndex)
-            : this(asNumbers.AsReadOnly(), nextAsNumberIndex)
+            : this(asNumbers.AsReadOnlyCollection(), nextAsNumberIndex)
         {
         }
 

@@ -42,14 +42,14 @@ namespace PcapDotNet.Packets.TestUtils
                             case GreSourceRouteEntryAddressFamily.AsSourceRoute:
                             {
                                 ushort[] asNumbers = ((Func<ushort>)(() => random.NextUShort())).GenerateArray(random.NextInt(1, 5));
-                                routing[i] = new GreSourceRouteEntryAs(asNumbers.AsReadOnly(), random.Next(asNumbers.Length + 1));
+                                routing[i] = new GreSourceRouteEntryAs(asNumbers.AsReadOnlyCollection(), random.Next(asNumbers.Length + 1));
                                 break;
                             }
 
                             case GreSourceRouteEntryAddressFamily.IpSourceRoute:
                             {
                                 IpV4Address[] ips = ((Func<IpV4Address>)(() => random.NextIpV4Address())).GenerateArray(random.NextInt(1, 5));
-                                routing[i] = new GreSourceRouteEntryIp(ips.AsReadOnly(), random.Next(ips.Length + 1));
+                                routing[i] = new GreSourceRouteEntryIp(ips.AsReadOnlyCollection(), random.Next(ips.Length + 1));
                                 break;
                             }
 
@@ -89,7 +89,7 @@ namespace PcapDotNet.Packets.TestUtils
                        AcknowledgmentSequenceNumber = version == GreVersion.EnhancedGre && random.NextBool() ? (uint?)random.NextUInt() : null,
                        RecursionControl = random.NextByte(8),
 //                       Flags = random.NextByte(32),
-                       Routing = routing == null ? null : routing.AsReadOnly(),
+                       Routing = routing == null ? null : routing.AsReadOnlyCollection(),
                        RoutingOffset = routingOffset,
                        StrictSourceRoute = strictSourceRoute,
                    };

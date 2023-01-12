@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using PcapDotNet.Base;
 using PcapDotNet.Packets.IpV4;
+using UInt128 = PcapDotNet.Base.UInt128;
 
 namespace PcapDotNet.Packets.IpV6
 {

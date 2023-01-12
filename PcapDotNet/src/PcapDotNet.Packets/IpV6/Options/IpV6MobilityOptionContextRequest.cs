@@ -42,7 +42,7 @@ namespace PcapDotNet.Packets.IpV6
         /// </summary>
         /// <param name="requests">The requests types and options.</param>
         public IpV6MobilityOptionContextRequest(params IpV6MobilityOptionContextRequestEntry[] requests)
-            : this(requests.AsReadOnly())
+            : this(requests.AsReadOnlyCollection())
         {
         }
 
@@ -51,7 +51,7 @@ namespace PcapDotNet.Packets.IpV6
         /// </summary>
         /// <param name="requests">The requests types and options.</param>
         public IpV6MobilityOptionContextRequest(IList<IpV6MobilityOptionContextRequestEntry> requests)
-            : this(requests.AsReadOnly())
+            : this(requests.AsReadOnlyCollection())
         {
         }
 

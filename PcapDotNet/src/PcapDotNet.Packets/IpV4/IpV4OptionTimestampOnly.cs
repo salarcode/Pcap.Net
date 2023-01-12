@@ -19,7 +19,7 @@ namespace PcapDotNet.Packets.IpV4
         public IpV4OptionTimestampOnly(byte overflow, byte pointedIndex, IList<IpV4TimeOfDay> timestamps)
             : base(IpV4OptionTimestampType.TimestampOnly, overflow, pointedIndex)
         {
-            _timestamps = timestamps.AsReadOnly();
+            _timestamps = timestamps.AsReadOnlyCollection();
         }
 
         /// <summary>

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using PcapDotNet.Base;
 using PcapDotNet.Packets.IpV4;
 
 namespace PcapDotNet.Packets.Igmp
@@ -717,7 +718,7 @@ namespace PcapDotNet.Packets.Igmp
                 case IgmpMessageType.MembershipReportVersion3:
                     return new IgmpReportVersion3Layer
                            {
-                               GroupRecords = GroupRecords.Select(record => record.ToGroupRecord()).ToList().AsReadOnly()
+                               GroupRecords = GroupRecords.Select(record => record.ToGroupRecord()).ToList().AsReadOnlyCollection()
                            };
 
                 default:

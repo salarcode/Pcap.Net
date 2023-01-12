@@ -49,7 +49,7 @@ namespace PcapDotNet.Packets.Dns
         {
             Priority = priority;
             Weight = weight;
-            Target = target.AsReadOnly();
+            Target = target.AsReadOnlyCollection();
         }
 
         /// <summary>

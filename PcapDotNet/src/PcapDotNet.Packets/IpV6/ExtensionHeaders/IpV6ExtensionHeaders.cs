@@ -50,7 +50,7 @@ namespace PcapDotNet.Packets.IpV6
         /// </summary>
         /// <param name="extensionHeaders">The extension headers.</param>
         public IpV6ExtensionHeaders(params IpV6ExtensionHeader[] extensionHeaders)
-            : this(extensionHeaders.AsReadOnly())
+            : this(extensionHeaders.AsReadOnlyCollection())
         {
         }
 
@@ -61,7 +61,7 @@ namespace PcapDotNet.Packets.IpV6
         /// </summary>
         /// <param name="extensionHeaders">The extension headers.</param>
         public IpV6ExtensionHeaders(IList<IpV6ExtensionHeader> extensionHeaders)
-            : this(extensionHeaders.AsReadOnly())
+            : this(extensionHeaders.AsReadOnlyCollection())
         {
         }
 
@@ -212,7 +212,7 @@ namespace PcapDotNet.Packets.IpV6
                 nextHeader = extensionHeader.NextHeader;
                 data = data.Subsegment(numBytesRead, data.Length - numBytesRead);
             }
-            Headers = headers.AsReadOnly();
+            Headers = headers.AsReadOnlyCollection();
             IsValid = (!nextHeader.HasValue || !IpV6ExtensionHeader.IsExtensionHeader(nextHeader.Value)) && headers.All(header => header.IsValid);
         }
 

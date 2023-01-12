@@ -23,7 +23,7 @@ namespace PcapDotNet.Packets.Dns
         /// </summary>
         public DnsOptions(IList<DnsOption> options)
         {
-            Options = options.AsReadOnly();
+            Options = options.AsReadOnlyCollection();
             BytesLength = options.Sum(option => option.Length);
         }
 

@@ -120,9 +120,9 @@ namespace PcapDotNet.Packets.Http
         private void SetTransferCodings(IList<string> transferCodings)
         {
             if (transferCodings.Any(coding => coding.Any(c => c.IsUppercaseAlpha())))
-                _transferCodings = transferCodings.Select(coding => coding.ToLowerInvariant()).ToArray().AsReadOnly();
+                _transferCodings = transferCodings.Select(coding => coding.ToLowerInvariant()).ToArray().AsReadOnlyCollection();
             else
-                _transferCodings = transferCodings.AsReadOnly();
+                _transferCodings = transferCodings.AsReadOnlyCollection();
         }
 
         private ReadOnlyCollection<string> _transferCodings;

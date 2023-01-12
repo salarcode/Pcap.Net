@@ -125,7 +125,7 @@ namespace PcapDotNet.Packets.Ip
 
         internal Options(IList<T> options, bool isValid, int length)
         {
-            _options = options.AsReadOnly();
+            _options = options.AsReadOnlyCollection();
             IsValid = isValid;
             BytesLength = length;
         }

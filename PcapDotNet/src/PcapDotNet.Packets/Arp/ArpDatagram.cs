@@ -104,7 +104,7 @@ namespace PcapDotNet.Packets.Arp
         /// </summary>
         public ReadOnlyCollection<byte> SenderHardwareAddress
         {
-            get { return ReadBytes(Offset.SenderHardwareAddress, HardwareLength).AsReadOnly(); }
+            get { return ReadBytes(Offset.SenderHardwareAddress, HardwareLength).AsReadOnlyCollection(); }
         }
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace PcapDotNet.Packets.Arp
         /// </summary>
         public ReadOnlyCollection<byte> SenderProtocolAddress
         {
-            get { return ReadBytes(OffsetSenderProtocolAddress, ProtocolLength).AsReadOnly(); }
+            get { return ReadBytes(OffsetSenderProtocolAddress, ProtocolLength).AsReadOnlyCollection(); }
         }
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace PcapDotNet.Packets.Arp
         /// </summary>
         public ReadOnlyCollection<byte> TargetHardwareAddress
         {
-            get { return ReadBytes(OffsetTargetHardwareAddress, HardwareLength).AsReadOnly(); }
+            get { return ReadBytes(OffsetTargetHardwareAddress, HardwareLength).AsReadOnlyCollection(); }
         }
 
         /// <summary>
@@ -137,7 +137,7 @@ namespace PcapDotNet.Packets.Arp
         /// </summary>
         public ReadOnlyCollection<byte> TargetProtocolAddress
         {
-            get { return ReadBytes(OffsetTargetProtocolAddress, ProtocolLength).AsReadOnly(); }
+            get { return ReadBytes(OffsetTargetProtocolAddress, ProtocolLength).AsReadOnlyCollection(); }
         }
 
         /// <summary>

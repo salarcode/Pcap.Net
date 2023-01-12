@@ -43,7 +43,7 @@ namespace PcapDotNet.Packets.Dns
         }
 
         internal DnsResourceDataDomainNames(params DnsDomainName[] domainNames)
-            : this(domainNames.AsReadOnly())
+            : this(domainNames.AsReadOnlyCollection())
         {
         }
 

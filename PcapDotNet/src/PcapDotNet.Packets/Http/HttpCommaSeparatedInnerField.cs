@@ -41,7 +41,7 @@
 //        }
 //
 //        public HttpCommaSeparatedInnerField(string name, IList<ReadOnlyCollection<byte>> values)
-//            :this(name, values.AsReadOnly())
+//            :this(name, values.AsReadOnlyCollection())
 //        {
 //        }
 //

@@ -141,6 +141,6 @@ namespace PcapDotNet.Packets.IpV6
                     IpV4Protocol.FragmentHeaderForIpV6,
                     IpV4Protocol.IpV6Opts,
                     IpV4Protocol.MobilityHeader
-                }.AsReadOnly();
+                }.AsReadOnlyCollection();
     }
 }

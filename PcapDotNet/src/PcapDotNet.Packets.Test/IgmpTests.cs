@@ -359,7 +359,7 @@ namespace PcapDotNet.Packets.Test
                                                                                new IgmpGroupRecord(
                                                                                    IgmpRecordType.CurrentStateRecordModeIsExclude,
                                                                                    IpV4Address.Zero, new List<IpV4Address>(), Datagram.Empty)
-                                                                           }.AsReadOnly()
+                                                                           }.AsReadOnlyCollection()
                                                         });
             
             buffer = new byte[reportVersion3.Length];

@@ -136,7 +136,7 @@ namespace PcapDotNet.Packets.IpV4
             if (pointedAddressIndex > PointedAddressIndexMaxValue)
                 throw new ArgumentOutOfRangeException("pointedAddressIndex", pointedAddressIndex, "Maximum value is " + PointedAddressIndexMaxValue);
 
-            _route = route.AsReadOnly();
+            _route = route.AsReadOnlyCollection();
             _pointedAddressIndex = pointedAddressIndex;
         }
 
