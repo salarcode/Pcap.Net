@@ -114,7 +114,7 @@ namespace PcapDotNet.Packets.Transport
             get { return Offset.Checksum; }
         }
 
-        internal UdpDatagram(byte[] buffer, int offset, int length)
+        public UdpDatagram(byte[] buffer, int offset, int length)
             : base(buffer, offset, length)
         {
         }

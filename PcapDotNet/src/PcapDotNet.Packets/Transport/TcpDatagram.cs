@@ -350,7 +350,7 @@ namespace PcapDotNet.Packets.Transport
             return Length >= HeaderMinimumLength && Length >= HeaderLength && HeaderLength >= HeaderMinimumLength && Options.IsValid;
         }
 
-        internal TcpDatagram(byte[] buffer, int offset, int length)
+        public TcpDatagram(byte[] buffer, int offset, int length)
             : base(buffer, offset, length)
         {
         }
