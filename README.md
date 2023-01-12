@@ -1,3 +1,10 @@
+# About this fork
+* Only `PcapDotNet.Packets` is migrated to .net 7.0. This library is very helpful to parse/construct network packets.
+To see the usage refer to here [https://github.com/PcapDotNet/Pcap.Net/wiki/Pcap.Net-Tutorial-Sending-Packets](https://github.com/PcapDotNet/Pcap.Net/wiki/Pcap.Net-Tutorial-Sending-Packets)
+* You need to build `PcapDotNet.Packets` in your end.
+* `UdpDatagram` and `UdpDatagram` constructors are made public, use them at your own risk.
+* Other projects are migrated to .net v4.8 but build fails.
+
 # Pcap.Net
 .NET wrapper for WinPcap written in C++/CLI and C#, which features almost all WinPcap features and includes a packet interpretation framework.
 
